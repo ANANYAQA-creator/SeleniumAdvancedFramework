@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true"
+          name="C:/Users/Black Panther/Desktop/Pramod Testing/Automation_Projects/SeleniumAdvancedFramework">
+        <classes>
+            <class name="com.rawteananya.Test.VWO.PageObjectModelTC.Test_VWO_Login_01_NormalPOM">
+                <methods>
+                    <include name="test_VWO_Login_Negative"/>
+                    <include name="test_VWO_Login_Positive"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
