@@ -1,0 +1,5 @@
+2025-09-23 20:45:59 INFO  Test_VWO_Login_02_Properties_POM - Starting the Negative testcases Page Object Model[POM]
+2025-09-23 20:46:03 INFO  Test_VWO_Login_02_Properties_POM - Asserting the invalid credentials
+2025-09-23 20:46:14 INFO  Test_VWO_Login_02_Properties_POM - Starting the Positive testcases Page Object Model[POM]
+2025-09-23 20:46:27 INFO  Test_VWO_Login_02_Properties_POM - Asserting the valid credentials
+2025-09-23 20:46:27 INFO  Test_VWO_Login_02_Properties_POM - Done of the testcases

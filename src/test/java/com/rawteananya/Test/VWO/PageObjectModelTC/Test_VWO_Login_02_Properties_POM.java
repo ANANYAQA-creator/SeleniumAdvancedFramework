@@ -7,14 +7,23 @@ import com.rawteananya.Pages.PageObjectModel.VWO.LoginPage;
 import com.rawteananya.Utils.PropertiesReader;
 import io.qameta.allure.Description;
 import io.qameta.allure.Owner;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+
 import static org.assertj.core.api.Assertions.assertThat;
 
+
+
 public class Test_VWO_Login_02_Properties_POM extends CommonToAllTest {
+
+    private static final Logger logger = LogManager.getLogger(Test_VWO_Login_02_Properties_POM.class);
+
+
 
     // D  - Driver
     // L - Locator
@@ -26,6 +35,7 @@ public class Test_VWO_Login_02_Properties_POM extends CommonToAllTest {
     @Test()
     public void test_VWO_Login_Negative(){
 
+        logger.info("Starting the Negative testcases Page Object Model[POM]");
         //Driver
 
         // Page class code (POM code) = 2   //L
@@ -39,6 +49,8 @@ public class Test_VWO_Login_02_Properties_POM extends CommonToAllTest {
         assertThat(error_msg).isNotNull().isNotEmpty().isNotBlank();
         //Assert.assertEquals(error_msg,"Your email, password, IP address or location did not match");
 
+        logger.info("Asserting the invalid credentials");
+
         Assert.assertEquals(error_msg,PropertiesReader.readKey("error_message"));
 
 
@@ -49,6 +61,8 @@ public class Test_VWO_Login_02_Properties_POM extends CommonToAllTest {
     @Test
 
     public void test_VWO_Login_Positive(){
+
+        logger.info("Starting the Positive testcases Page Object Model[POM]");
 
         //Page class code(POM Code) =2 //L
 
@@ -62,7 +76,11 @@ public class Test_VWO_Login_02_Properties_POM extends CommonToAllTest {
 
         assertThat(username_loggedin).isNotBlank().isNotEmpty().isNotNull();
       //  Assert.assertEquals(username_loggedin,"Cts");
-Assert.assertEquals(username_loggedin,PropertiesReader.readKey("expected_result"));
+
+        logger.info("Asserting the valid credentials");
+
+        logger.info("Done of the testcases");
+        Assert.assertEquals(username_loggedin,PropertiesReader.readKey("expected_result"));
 
     }
 }
